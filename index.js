@@ -4,10 +4,10 @@ document.addEventListener("keypress", function () {
     makesound(event.key);
 
     buttonAmination(event.key);
-    
+
 
 });
-
+///////////////
 var drumcount = document.querySelectorAll(".drum").length;
 
 for (var i = 0; i <= drumcount; i++) {
@@ -23,7 +23,7 @@ for (var i = 0; i <= drumcount; i++) {
 
 }
 
-function makesound(key){
+function makesound(key) {
 
     switch (key) {
         case "w": var audio = new Audio("sounds/tom-1.mp3");
@@ -53,15 +53,15 @@ function makesound(key){
 
 function buttonAmination(currentKey) {
 
-   var activebutton = document.querySelector("."+currentKey);
+    var activebutton = document.querySelector("." + currentKey);
 
-   activebutton.classList.add("pressed");
+    activebutton.classList.add("pressed");
 
-   setTimeout(function(){
+    setTimeout(function () {
 
-    activebutton.classList.remove("pressed");
+        activebutton.classList.remove("pressed");
 
-   }, 100);
+    }, 100);
 
 }
 
